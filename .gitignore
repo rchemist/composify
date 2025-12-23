@@ -1,4 +1,99 @@
-dist
-node_modules
+# ============================================
+# Composify Project .gitignore
+# ============================================
 
+# Build Artifacts
+dist/
+build/
+out/
+.next/
+
+# Dependencies
+node_modules/
+
+# Package Manager
+pnpm-debug.log*
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Test Coverage
+coverage/
+coverage.json
+htmlcov/
+.coverage
+
+# TypeScript
+*.tsbuildinfo
+.tscache/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# OS Files
 .DS_Store
+Thumbs.db
+Desktop.ini
+.Spotlight-V100
+.Trashes
+
+# IDE & Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+.cursor/
+
+# Logs
+logs/
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+
+# ============================================
+# MoAI-ADK Directory Management
+# ============================================
+
+# Exclude all .moai by default
+.moai/*
+
+# Include essential directories (project documentation)
+!.moai/config/
+!.moai/config/**
+!.moai/project/
+!.moai/project/**
+!.moai/specs/
+!.moai/specs/**
+
+# Exclude sensitive config files
+.moai/config/presets/*.json
+
+# MoAI backup directory
+.moai-backups/
+
+# ============================================
+# Claude Code
+# ============================================
+.claude/settings.local.json
+.claude/settings.local.*.json
+.claude/local/
+.claude/skills/*/.env*
+.claude/skills/*/secrets/
+.claude/skills/*/*/*key*
+.claude/skills/*/*/*secret*
+.claude/skills/*/*/*token*
+.claude/.env.local*
+
+# ============================================
+# Deployment
+# ============================================
+.vercel/
+.netlify/
+.firebase/
